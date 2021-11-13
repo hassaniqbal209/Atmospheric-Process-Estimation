@@ -14,7 +14,7 @@ Measurements are taken with on-board sensors and integrated with current best es
 The observer’s output to guide the collection of subsequent measurements (i.e., adaptive sampling). The controller block scores candidate sampling trajectories and selects the one that maximizes information gain. This is done by maximizing the 𝑡𝑟𝑎𝑐𝑒{𝐻𝑇𝐻+𝐽𝐶𝐽𝐶+𝜇𝐼}. Here, the first term corresponds to the information due to the previous collected measurements by the robots, while the second term represents the expected information that will be contributed by the future measurements scheduled to be collected by the robots that have already determined the optimal locations for them to go to. 𝐻,𝐽𝑐 are Jacobians computed as; 𝐶(𝜃)=𝐶(𝜃̅)+𝐽𝑐(𝜃−𝜃̅) 𝐽𝑐=(∇𝐶1(𝜃̅,𝑝1),∇𝐶2(𝜃̅,𝑝2),…,∇𝐶𝑚(𝜃̅,𝑝2))𝑇
 For the final step, controller gives control inputs to the robot and finishes the loop. Finally, sampling tasks are allocated to each of the N robots.
 
-5. Algorithm
+## Algorithm
   1.  Collect M concentration measurements
   2. Solve estimation problem (1) for all available measurement data based on initial/last estimate to obtain new estimator 𝜃̂
   3. Generate information matrix 𝐽𝑐𝑇𝐽𝑐 for 𝜃̂ based on last M measurement locations
